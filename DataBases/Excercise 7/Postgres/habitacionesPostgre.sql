@@ -27,7 +27,7 @@ CREATE TABLE Fecha (
   mes INTEGER   NOT NULL ,
   year_2 INTEGER   NOT NULL ,
   semana INTEGER   NOT NULL ,
-  hora INTEGER   NOT NULL   ,
+  hora VARCHAR(50)   NOT NULL   ,
 PRIMARY KEY(id_fecha));
 
 
@@ -47,10 +47,10 @@ CREATE INDEX Gastos_FKIndex1 ON Gastos (Habitaciones_nro_habitacion);
 CREATE TABLE Habitaciones (
   nro_habitacion INTEGER   NOT NULL ,
   Piso_numero_piso INTEGER   NOT NULL ,
-  tipo_habitacion INTEGER   NOT NULL ,
-  precio_habitacion INTEGER   NOT NULL ,
-  temporada INTEGER   NOT NULL ,
-  estado_habitacion INTEGER   NOT NULL   ,
+  tipo_habitacion VARCHAR(50)   NOT NULL ,
+  precio_habitacion FLOAT   NOT NULL ,
+  temporada VARCHAR(50)   NOT NULL ,
+  estado_habitacion VARCHAR(50)   NOT NULL   ,
 PRIMARY KEY(nro_habitacion)  );
 
 
@@ -60,8 +60,8 @@ CREATE INDEX Habitaciones_FKIndex1 ON Habitaciones (Piso_numero_piso);
 
 CREATE TABLE Persona (
   dni VARCHAR(100)   NOT NULL ,
-  nombre INTEGER   NOT NULL ,
-  apellido INTEGER   NOT NULL ,
+  nombre VARCHAR(50)   NOT NULL ,
+  apellido VARCHAR(50)   NOT NULL ,
   telefono VARCHAR(20)   NOT NULL   ,
 PRIMARY KEY(dni));
 
